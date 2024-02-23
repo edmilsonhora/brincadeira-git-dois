@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Console_Bricadeira_Git_Dois.DomainModel
 {
-    public class Aluno
+    public interface IRepositoryBase<T> where T : EntityBase
     {
-        public string Nome { get; set; }
-        public string RA { get; set; }
+        void Salvar(T entity);
+        void Excluir(T entity);
+        T ObterPor(int id);
+        List<T> ObterTodos();
     }
-
-    public interface IAlunoRepository : IRepositoryBase<Aluno> { }
 }
