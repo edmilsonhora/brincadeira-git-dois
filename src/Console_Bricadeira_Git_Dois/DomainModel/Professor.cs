@@ -10,6 +10,7 @@ namespace Console_Bricadeira_Git_Dois.DomainModel
     {
         public string Nome { get; set; }
         public string RE { get; set; }
+        public string CPF { get; set; }
 
         public override void Validar()
         {
